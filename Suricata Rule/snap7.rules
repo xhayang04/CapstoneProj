@@ -1,0 +1,5 @@
+#alert tcp 10.6.1.114 any -> 10.6.1.111 102 (msg:"Snap7 Setup Communication Detected"; content:"|32|"; sid:1000050; rev:6;)
+alert tcp 10.6.1.114 any -> 10.6.1.111 102 (msg:"Snap7 Read Bool Detected"; content:"|32|"; content:"|04|"; sid:1000052; rev:6;)
+alert tcp 10.6.1.114 any -> 10.6.1.111 102 (msg:"Snap7 Read Memory Detected"; content:"|32|"; content:"|04|"; content:"|00 04|"; sid:1000054; rev:6;)
+alert tcp 10.6.1.114 any -> 10.6.1.111 102 (msg:"Snap7 Write Bool Detected"; content:"|32|"; content:"|05|"; sid:1000056; rev:6;)
+alert tcp 10.6.1.114 any -> 10.6.1.111 102 (msg:"Snap7 Write Memory Detected"; content:"|32|"; content:"|05|"; content:"|00 04|"; sid:1000058; rev:6;)
